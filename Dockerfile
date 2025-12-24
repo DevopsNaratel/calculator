@@ -2,6 +2,9 @@
 FROM node:18-alpine AS builder
 WORKDIR /app
 
+# Tambahkan baris ini untuk mengatasi error OpenSSL
+ENV NODE_OPTIONS=--openssl-legacy-provider
+
 # Copy dependency files
 COPY package*.json ./
 RUN npm install
