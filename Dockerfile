@@ -16,6 +16,7 @@ RUN npm run build
 # Stage 2: Sajikan dengan Nginx
 FROM nginx:alpine
 # Copy hasil build dari stage sebelumnya ke folder default Nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/build /usr/share/nginx/html
 
 # Expose port 80
