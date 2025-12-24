@@ -8,7 +8,7 @@ pipeline {
         
         // --- KONFIGURASI GIT (REPO MANIFEST) ---
         GIT_CREDS    = 'git-token'
-        MANIFEST_REPO_URL = 'github.com/diwamln/intern-devops-manifests.git' 
+        MANIFEST_REPO_URL = 'https://github.com/DevopsNaratel/deployment-manifests' 
         
         // --- PATH FILE MANIFEST ---
         // Pastikan file deployment.yaml ini sudah ada di repo manifest Anda
